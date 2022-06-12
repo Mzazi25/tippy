@@ -4,15 +4,102 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:autofillHints="Bill Amount"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="16dp"
+    tools:layout_editor_absoluteY="-16dp">
 
     <TextView
+        android:id="@+id/base_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/base1"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/Percent_box"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Percent_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/Tip_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/base_box"
+        tools:text="24%" />
+
+    <TextView
+        android:id="@+id/Tip_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tip"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Percent_box" />
+
+    <EditText
+        android:id="@+id/text_base_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:autofillHints=""
+        android:ems="8"
+        android:hint="@string/bill_amount"
+        android:inputType="numberDecimal"
+        android:textColorHint="#78909C"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/base_box"
+        app:layout_constraintStart_toEndOf="@+id/base_box"
+        app:layout_constraintTop_toTopOf="@+id/base_box" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_box"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="30"
+        app:layout_constraintBottom_toBottomOf="@+id/Percent_box"
+        app:layout_constraintStart_toStartOf="@+id/text_base_box"
+        app:layout_constraintTop_toTopOf="@+id/Percent_box" />
+
+    <TextView
+        android:id="@+id/tip_box_2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Tip_box"
+        app:layout_constraintStart_toStartOf="@+id/seek_bar_box"
+        app:layout_constraintTop_toTopOf="@+id/Tip_box"
+        tools:text="19.96" />
+
+    <TextView
+        android:id="@+id/total_box_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/Total"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/Tip_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tip_box" />
+
+    <TextView
+        android:id="@+id/tip_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/total_box_final"
+        app:layout_constraintStart_toStartOf="@+id/tip_box_2"
+        app:layout_constraintTop_toTopOf="@+id/total_box_final"
+        android:textSize="24sp"
+        tools:text="103.36" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

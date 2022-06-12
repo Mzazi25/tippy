@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Tippy</string>
+    <string name="total">Total</string>
+    <string name="base1">Bill</string>
+    <string name="tip">Tip</string>
+    <string name="bill_amount">Bill Amount</string>
+    <string name="Total">Total</string>
 </resources>
