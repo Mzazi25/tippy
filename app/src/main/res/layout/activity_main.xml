@@ -17,13 +17,13 @@
         android:layout_marginTop="32dp"
         android:text="@string/base1"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/Percent_box"
+        app:layout_constraintEnd_toEndOf="@+id/tvTipPercent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/Percent_box"
+        android:id="@+id/tvTipPercent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -44,10 +44,10 @@
         android:text="@string/tip"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Percent_box" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTipPercent" />
 
     <EditText
-        android:id="@+id/text_base_box"
+        android:id="@+id/etBaseAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -62,21 +62,21 @@
         app:layout_constraintTop_toTopOf="@+id/base_box" />
 
     <SeekBar
-        android:id="@+id/seek_bar_box"
+        android:id="@+id/seekBarTip"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:max="30"
-        app:layout_constraintBottom_toBottomOf="@+id/Percent_box"
-        app:layout_constraintStart_toStartOf="@+id/text_base_box"
-        app:layout_constraintTop_toTopOf="@+id/Percent_box" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipPercent"
+        app:layout_constraintStart_toStartOf="@+id/etBaseAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvTipPercent" />
 
     <TextView
-        android:id="@+id/tip_box_2"
+        android:id="@+id/tvTipAmount"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/Tip_box"
-        app:layout_constraintStart_toStartOf="@+id/seek_bar_box"
+        app:layout_constraintStart_toStartOf="@+id/seekBarTip"
         app:layout_constraintTop_toTopOf="@+id/Tip_box"
         tools:text="19.96" />
 
@@ -93,11 +93,11 @@
         app:layout_constraintTop_toBottomOf="@+id/Tip_box" />
 
     <TextView
-        android:id="@+id/tip_total"
+        android:id="@+id/tvTipTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/total_box_final"
-        app:layout_constraintStart_toStartOf="@+id/tip_box_2"
+        app:layout_constraintStart_toStartOf="@+id/tvTipAmount"
         app:layout_constraintTop_toTopOf="@+id/total_box_final"
         android:textSize="24sp"
         tools:text="103.36" />
