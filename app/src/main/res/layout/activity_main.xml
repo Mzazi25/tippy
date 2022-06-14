@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="56dp"
         android:text="@string/tip"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,10 +96,34 @@
         android:id="@+id/tvTipTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/total_box_final"
         app:layout_constraintStart_toStartOf="@+id/tvTipAmount"
         app:layout_constraintTop_toTopOf="@+id/total_box_final"
-        android:textSize="24sp"
         tools:text="103.36" />
+
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Made with ❤️ by Caleb"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTipDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarTip"
+        app:layout_constraintStart_toStartOf="@+id/seekBarTip"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTip"
+        tools:text="Amazing" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
