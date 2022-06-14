@@ -87,6 +87,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:text="@string/Total"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/Tip_box"
         app:layout_constraintStart_toStartOf="parent"
